@@ -3,16 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Diane Hagan Scherff — author of Girls to Pearls, a coming-of-age historical narrative set in 1950s Savannah, Georgia.">
-  <meta property="og:title" content="Diane Hagan Scherff — Girls to Pearls">
-  <meta property="og:description" content="A coming-of-age story set among the magnolias and moss of 1950s Savannah, Georgia.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="media/logo.png">
+
+  <!-- ── SEO ─────────────────────────────────────── -->
   <title>Diane Hagan Scherff — Girls to Pearls</title>
+  <meta name="description" content="Diane Hagan Scherff is the author of Girls to Pearls, a coming-of-age historical narrative about Catholic girls growing up in 1950s Savannah, Georgia, at St. Vincent's Academy.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dianewrites.org/">
+
+  <!-- ── Open Graph (iMessage, Facebook, LinkedIn) ─ -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://dianewrites.org/">
+  <meta property="og:title"       content="Diane Hagan Scherff — Girls to Pearls">
+  <meta property="og:description" content="A coming-of-age story set among the magnolias and moss of 1950s Savannah, Georgia.">
+  <meta property="og:image"       content="https://dianewrites.org/media/logo.png">
+  <meta property="og:image:width"  content="1128">
+  <meta property="og:image:height" content="1118">
+  <meta property="og:image:alt"   content="Diane Writes — Southern Vintage logo">
+  <meta property="og:site_name"   content="Diane Hagan Scherff">
+  <meta property="og:locale"      content="en_US">
+
+  <!-- ── Twitter / X Card ───────────────────────── -->
+  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:title"       content="Diane Hagan Scherff — Girls to Pearls">
+  <meta name="twitter:description" content="A coming-of-age story set among the magnolias and moss of 1950s Savannah, Georgia.">
+  <meta name="twitter:image"       content="https://dianewrites.org/media/logo.png">
+  <meta name="twitter:image:alt"   content="Diane Writes — Southern Vintage logo">
+
+  <!-- ── Security headers ───────────────────────── -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    style-src 'self' https://fonts.googleapis.com;
+    font-src https://fonts.gstatic.com;
+    img-src 'self' https: data:;
+    script-src 'self';
+    connect-src 'self' https://formspree.io;
+    form-action 'self' https://formspree.io;
+    frame-ancestors 'none';
+  ">
+
+  <!-- ── Favicon ────────────────────────────────── -->
+  <link rel="icon" type="image/png" href="media/logo.png">
+  <link rel="apple-touch-icon" href="media/logo.png">
+
+  <!-- ── Fonts ──────────────────────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- ── Structured data (JSON-LD) ──────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://dianewrites.org/",
+    "name": "Diane Hagan Scherff",
+    "url": "https://dianewrites.org/",
+    "description": "Debut author of Girls to Pearls, a coming-of-age historical narrative set in 1950s Savannah, Georgia.",
+    "image": "https://dianewrites.org/media/author-headshot.png",
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Author"
+    },
+    "workExample": {
+      "@type": "Book",
+      "name": "Girls to Pearls",
+      "author": { "@id": "https://dianewrites.org/" },
+      "genre": "Historical Narrative Non-Fiction",
+      "description": "A coming-of-age story following a group of Catholic girls growing up in 1950s Savannah, Georgia, at St. Vincent's Academy.",
+      "locationCreated": {
+        "@type": "Place",
+        "name": "Savannah, Georgia, USA"
+      }
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -101,7 +169,7 @@
         <div class="book-cover">
           <img
             src="https://placehold.co/300x450/C4856A/FAF7F2?text=Girls+to+Pearls"
-            alt="Girls to Pearls — book cover"
+            alt="Girls to Pearls — book cover, coming soon"
             width="300"
             height="450"
             loading="lazy"
@@ -112,26 +180,63 @@
 
     <!-- ===================== GALLERY ===================== -->
     <section id="gallery" class="gallery section">
-      <div class="section-inner">
+      <div class="section-inner gallery-header">
         <p class="section-label">Gallery</p>
         <h2 class="section-heading">A Glimpse Into Savannah</h2>
         <div class="section-rule" aria-hidden="true"></div>
         <p class="gallery-intro">Photographs and memories from 1950s Savannah — the city, the school, the girls who became women.</p>
-        <div class="gallery-grid">
-          <figure class="gallery-item">
-            <img src="media/gallery-graduation-sepia.jpg" alt="St. Vincent's Academy graduates, Savannah, 1950s" loading="lazy">
-          </figure>
-          <figure class="gallery-item">
-            <img src="media/gallery-graduation.png" alt="St. Vincent's Academy graduating class" loading="lazy">
-          </figure>
-          <figure class="gallery-item">
-            <img src="media/gallery-sva-dance.png" alt="St. Vincent's Academy formal dance, Savannah" loading="lazy">
-          </figure>
-          <figure class="gallery-item">
-            <img src="media/gallery-graduation-original.jpg" alt="SVA graduation — an original photograph" loading="lazy">
-          </figure>
-        </div>
       </div>
+
+      <!-- Full-width slideshow -->
+      <div class="slideshow"
+           id="gallery-slideshow"
+           role="region"
+           aria-label="Photo gallery slideshow"
+           aria-roledescription="carousel">
+
+        <div class="slideshow-track">
+
+          <figure class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+            <img src="media/gallery-graduation-sepia.jpg"
+                 alt="St. Vincent's Academy graduates in caps and gowns, Savannah, 1950s"
+                 loading="lazy">
+            <figcaption>St. Vincent's Academy — Graduation Day, Savannah, 1950s</figcaption>
+          </figure>
+
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+            <img src="media/gallery-graduation.png"
+                 alt="The graduating class of St. Vincent's Academy, Savannah"
+                 loading="lazy">
+            <figcaption>The Graduating Class of St. Vincent's Academy</figcaption>
+          </figure>
+
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+            <img src="media/gallery-sva-dance.png"
+                 alt="A young woman and her escort at a formal St. Vincent's Academy dance, Savannah"
+                 loading="lazy">
+            <figcaption>A Formal Evening at St. Vincent's Academy — Savannah, Georgia</figcaption>
+          </figure>
+
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+            <img src="media/gallery-graduation-original.jpg"
+                 alt="An original photograph of SVA graduates, Savannah, 1950s"
+                 loading="lazy">
+            <figcaption>An Original Photograph from the Archives</figcaption>
+          </figure>
+
+        </div><!-- /.slideshow-track -->
+
+        <button class="slide-btn slide-btn--prev" aria-label="Previous photo">&#8249;</button>
+        <button class="slide-btn slide-btn--next" aria-label="Next photo">&#8250;</button>
+
+        <div class="slide-dots" role="tablist" aria-label="Select a photo">
+          <button class="slide-dot is-active" role="tab" aria-selected="true"  aria-label="Photo 1"></button>
+          <button class="slide-dot"            role="tab" aria-selected="false" aria-label="Photo 2"></button>
+          <button class="slide-dot"            role="tab" aria-selected="false" aria-label="Photo 3"></button>
+          <button class="slide-dot"            role="tab" aria-selected="false" aria-label="Photo 4"></button>
+        </div>
+
+      </div><!-- /.slideshow -->
     </section>
 
     <!-- ===================== CONTACT ===================== -->
@@ -148,10 +253,9 @@
           FORMSPREE SETUP INSTRUCTIONS:
           1. Go to https://formspree.io and create a free account (50 submissions/month free)
           2. Create a new form — you'll receive a unique endpoint like: https://formspree.io/f/xyzabcde
-          3. Replace "YOUR_FORMSPREE_ID" below with your actual form ID (just the ID, e.g. "xyzabcde")
+          3. Replace "YOUR_FORMSPREE_ID" below with your actual form ID (e.g. "xyzabcde")
           4. The form action should read: action="https://formspree.io/f/xyzabcde"
-          5. Formspree handles spam filtering, email delivery, and will forward messages to your email
-          6. Until this is set up, visitors can use the direct email link below
+          5. Formspree handles spam filtering and email delivery
         -->
         <form
           class="contact-form"
@@ -163,35 +267,15 @@
           <input type="hidden" name="_subject" value="New message from dianewrites.org">
           <div class="form-group">
             <label for="contact-name">Name</label>
-            <input
-              type="text"
-              id="contact-name"
-              name="name"
-              required
-              placeholder="Your name"
-              autocomplete="name"
-            >
+            <input type="text" id="contact-name" name="name" required placeholder="Your name" autocomplete="name">
           </div>
           <div class="form-group">
             <label for="contact-email">Email</label>
-            <input
-              type="email"
-              id="contact-email"
-              name="email"
-              required
-              placeholder="your@email.com"
-              autocomplete="email"
-            >
+            <input type="email" id="contact-email" name="email" required placeholder="your@email.com" autocomplete="email">
           </div>
           <div class="form-group">
             <label for="contact-message">Message</label>
-            <textarea
-              id="contact-message"
-              name="message"
-              required
-              rows="5"
-              placeholder="Your message..."
-            ></textarea>
+            <textarea id="contact-message" name="message" required rows="5" placeholder="Your message..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
@@ -208,7 +292,9 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-name">Diane Hagan Scherff</p>
-      <p class="footer-copy">&copy; <span id="footer-year"></span> Diane Hagan Scherff. All rights reserved.</p>
+      <p class="footer-copy">
+        &copy; <span id="footer-year"></span> Diane Hagan Scherff. All Rights Reserved.
+      </p>
       <p class="footer-site">dianewrites.org</p>
     </div>
   </footer>

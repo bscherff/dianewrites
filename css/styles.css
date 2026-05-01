@@ -24,7 +24,7 @@
   --section-padding:  clamp(4rem, 8vw, 8rem);
   --inner-max-width:  1100px;
   --inner-padding:    clamp(1.25rem, 4vw, 2.5rem);
-  --nav-height:       72px;
+  --nav-height:       112px;
 
   /* Transitions */
   --transition-base: 0.25s ease;
@@ -203,7 +203,7 @@ em {
 }
 
 .nav-logo-img {
-  height: 48px;
+  height: 96px;
   width: auto;
   display: block;
   transition: opacity var(--transition-base);
@@ -453,37 +453,128 @@ em {
 /* ============================================================
    GALLERY
    ============================================================ */
+.gallery {
+  padding-bottom: 0;
+}
+
+.gallery-header {
+  margin-bottom: 2.5rem;
+}
+
 .gallery-intro {
   color: var(--color-muted);
   font-style: italic;
   font-family: var(--font-serif);
   font-size: 1.15rem;
   max-width: 560px;
-  margin-bottom: 3rem;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-.gallery-item {
-  overflow: hidden;
-  border-radius: 2px;
-  background-color: var(--color-alt-bg);
-}
-
-.gallery-item img {
+/* ============================================================
+   SLIDESHOW
+   ============================================================ */
+.slideshow {
+  position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
-  transition: transform var(--transition-slow);
+  background-color: var(--color-heading);
+  overflow: hidden;
+  user-select: none;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.04);
+.slideshow-track {
+  position: relative;
+  width: 100%;
+  height: clamp(420px, 72vh, 860px);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.75s ease;
+  pointer-events: none;
+  margin: 0;
+}
+
+.slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.slide figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 5rem 1.25rem;
+  background: linear-gradient(transparent, rgba(44, 36, 32, 0.72));
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: rgba(250, 247, 242, 0.82);
+  text-align: center;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(250, 247, 242, 0.1);
+  border: 1px solid rgba(250, 247, 242, 0.3);
+  color: var(--color-nav-text);
+  font-size: 2.2rem;
+  line-height: 1;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-base);
+  z-index: 10;
+}
+
+.slide-btn:hover,
+.slide-btn:focus-visible {
+  background: rgba(250, 247, 242, 0.28);
+  outline: none;
+}
+
+.slide-btn--prev { left: 1.5rem; }
+.slide-btn--next { right: 1.5rem; }
+
+.slide-dots {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.65rem;
+  z-index: 10;
+}
+
+.slide-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 247, 242, 0.55);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition-base), border-color var(--transition-base);
+}
+
+.slide-dot.is-active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 /* ============================================================
@@ -632,8 +723,10 @@ em {
    RESPONSIVE — TABLET (600px+)
    ============================================================ */
 @media (min-width: 600px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .slide-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 2.5rem;
   }
 }
 
@@ -677,6 +770,25 @@ em {
     border-bottom: none;
   }
 
+  /* Slightly smaller logo on mobile */
+  .nav-logo-img {
+    height: 72px;
+  }
+
+  /* Slideshow buttons */
+  .slide-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+  }
+  .slide-btn--prev { left: 0.75rem; }
+  .slide-btn--next { right: 0.75rem; }
+
+  .slide figcaption {
+    padding: 1.5rem 3.5rem 1rem;
+    font-size: 0.72rem;
+  }
+
   /* Stack two-column grids */
   .about-inner {
     grid-template-columns: 1fr;
@@ -706,7 +818,7 @@ em {
    RESPONSIVE — DESKTOP (1000px+)
    ============================================================ */
 @media (min-width: 1000px) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .slideshow-track {
+    height: clamp(540px, 75vh, 900px);
   }
 }

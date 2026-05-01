@@ -196,18 +196,21 @@ em {
 }
 
 .nav-logo {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: var(--color-heading);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  transition: color var(--transition-base);
-  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.site-nav.nav--scrolled .nav-logo {
-  color: var(--color-nav-text);
+.nav-logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  transition: opacity var(--transition-base);
+}
+
+.nav-logo:hover .nav-logo-img {
+  opacity: 0.85;
 }
 
 .nav-links {

@@ -265,6 +265,8 @@
           novalidate
         >
           <input type="hidden" name="_subject" value="New message from dianewrites.org">
+          <!-- Honeypot: invisible to real users; bots fill it and Formspree discards the submission -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-group">
             <label for="contact-name">Name</label>
             <input type="text" id="contact-name" name="name" required placeholder="Your name" autocomplete="name">
@@ -279,6 +281,10 @@
           </div>
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
+
+        <p class="contact-privacy">
+          Your message is handled securely via <a href="https://formspree.io/legal/privacy-policy" rel="noopener noreferrer" target="_blank">Formspree</a> and will only be used to respond to your inquiry.
+        </p>
 
         <p class="contact-email-direct">
           Or write directly: <a href="mailto:hello@dianewrites.org">hello@dianewrites.org</a>

@@ -1,6 +1,14 @@
 (function () {
   'use strict';
 
+  // ── Clickjack guard ──────────────────────────────────────────
+  // Hides the page if it is ever loaded inside an iframe.
+  // (The frame-ancestors CSP directive is ignored by browsers
+  //  when delivered via <meta> tag — this JS guard fills that gap.)
+  if (window.self !== window.top) {
+    document.documentElement.style.display = 'none';
+  }
+
   // ── Footer year ─────────────────────────────────────────────
   const yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

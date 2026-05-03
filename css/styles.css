@@ -669,6 +669,23 @@ em {
   text-align: center;
 }
 
+.contact-privacy {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-privacy a {
+  color: var(--color-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact-privacy a:hover {
+  color: var(--color-accent);
+}
+
 .contact-email-direct {
   font-size: 0.9rem;
   color: var(--color-muted);
